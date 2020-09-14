@@ -1,6 +1,6 @@
 <?php
 
-namespace Communiq\Locations;
+namespace Probegin\Test;
 
 use Illuminate\Support\ServiceProvider;
 
