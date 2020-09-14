@@ -1,0 +1,51 @@
+{
+    "name": "probegin/test",
+    "description": "Test package",
+    "keywords": [],
+    "license": "proprietary",
+    "support": {
+        "issues": "",
+        "source": ""
+    },
+    "authors": [
+        {
+            "name": "Probegin",
+            "email": "pavlo.medynskyi@probegin.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.2.0",
+        "ext-json": "*"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Probegin\\Test\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Probegin\\Test\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Probegin\\Test\\TestServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "phpstan:test": "phpstan analyse --ansi",
+        "phpunit:test": "phpunit --colors=always",
+        "test": [
+            "@phpstan:test",
+            "@phpunit:test"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
